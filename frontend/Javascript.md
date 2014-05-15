@@ -23,11 +23,11 @@ JavaScript has a number of built-in types that you'll use all the time.  Almost 
 - Dates
 - Errors
 
-You can often detirmine the type of variable by using *typeof*
+You can often determine the type of variable by using *typeof*
 
 ````JS
 var name = 'Kevin';
-console.log(typeof(name));
+console.log(typeof(name)); // typeof actually isn't a function, so: console.log(typeof name) works as well
 ````
 **Output**
 ````JS 
@@ -38,7 +38,7 @@ console.log(typeof(name));
 
 ### Objects
 
-Javascript objects are a store for unordered name value pairs called properties.  A properties value can be almost anything in Javascript such as numbers, strings, and other objects or even errors and functions!  For those of you with other programming experience Objects are like *dictionaries* or *maps*.
+Javascript objects are a store for unordered name value pairs called properties.  A property's value can be almost Javascript type such as numbers, strings, and other objects or even errors and functions!  For those of you with other programming experience Objects are like *dictionaries* or *maps*.
 
 Object properties can be accessed by either dot notation or bracket notation.  A property name can be any valid string, but not all names can be accessed via dot-notation.  Reserved words must be set with bracket notation.  Other names that are not valid javascript identifiers (e.g. starts with a number or contains an hyphen) must be accessed and set with bracket notation.
 
@@ -66,6 +66,7 @@ var house = {
 console.log(house.price);
 console.log(house.location.street); 
 console.log(house.class)  					// Names of reserved words can be accessed with dot-notation
+											// TODO: some browsers barf on accessing reserved words like this, right?
 console.log(house['display-online']);    	// Invalid names must be accessed with bracket notation
 ````
 
@@ -114,7 +115,7 @@ Functions are first class objects, they can be passed around just like any other
 
 
 
-
+// TODO: I might move 'Debugging' to the very end?
 ## Debugging
 
 Most modern browsers have fairly good debugging capabilites built in.  They allow you to set breakpoints, log things out, and inspect various objects. This tutorial applies mostly to Chrome, but other browsers have debugging capabilities as well.
@@ -125,9 +126,9 @@ Most modern browsers have fairly good debugging capabilites built in.  They allo
 console.log();
 ````
 
-You can use the console.log() statement in your scripts to output information to the javascript console.  The log statment does not stop execution and is an exelent way to quickly check if variables are set to their intended values or if functions are running in the expected order.
+You can use the console.log() statement in your scripts to output information to the javascript console.  The log statment does not stop execution and is an excellent way to quickly check if variables are set to their intended values or if functions are running in the expected order.
 
-While the debugger is paused (see next section), you can used the console to examine and manipulate variables that are in scope.
+While the debugger is paused (see next section), you can use the console to examine and manipulate variables that are in scope. // TODO: "in scope" might not make sense here, because we haven't actually introduced scoping yet -- that happens in the 'functions' section.
 
 ### The Debugger
 
@@ -162,34 +163,41 @@ Changes aren't saved to disk, and don't persist across page loads.
 
 ## Variable Declaration 
 
-Variables are declared with the **var** keyword.
-
-However they can also be declared without it.
+Variables are declared with the **var** keyword. Variables declared without using **var** become global, which is bad.
 
 ### The "new" Keyword
 
-The new keyword in javascript creates an instance of either a user defined object or a built in.  There is a great deal of debate in the Javscript community on what proper best practices are for using the new keyword.  For brevity I'll offer this advice
+The new keyword in javascript creates an instance of either a user defined object or a built in.  There is a great deal of debate in the Javscript community on what proper best practices are for using the new keyword.  For brevity I'll offer this advice:
 
 ***Do***
 
 - Use 'new' for creating new instances of dojo classes
 - Use 'new' for creating new Date instances
-- Create instances of built ins with their simple constructor
+- Create instances of built-ins with the literal syntax:
 ````JS
 var myArray = ['a', 'b', 'c'];
+var myObject = { "foo": "bar" };
+var myNumber = 3.33;
+var myString = "a string";
 ````
 
 ***Don't***
 
 - Use 'new' for creating arrays, objects, strings, and other built ins.  
 ````JS
+// BAD
 var myArray = new Array('a', 'b', 'c');
+var myObject = new Object(); 
+var myNumber = new Number("3.33");
+var myString = new String("a string");
 ````
+
+// TODO: probably worth noting that you *can* use constructor **functions** when you want to do explicit type conversion, e.g.: var myNumber = Number("3.33");
 
 
 ### Function Scope
 
-Variables declared without the **var** keyword go into the global scope, and we almost never want this.  Make a mental note, then don't use it.
+Variables declared without the **var** keyword go into the global scope, and we never want this.  Make a mental note, then don't use it.
 
 Locally declared variables (those declared with **var**) have **function scope** not block scope (or any other scope)
 
@@ -202,6 +210,8 @@ setBar();
 console.log(bar);
 
 ````
+
+// Would be good to have an explanation of the output here -- why is this the output?
 
 **Output**
 ````JS 
@@ -313,6 +323,8 @@ function sumNumbers(){
 
 Function declarations are subject to hoisting, but function expressions are not.
 
+// TODO: example? I don't think it will be obvious what this means
+
 
 ### Closures
 
@@ -372,11 +384,11 @@ Functions that are not explcitly bound to an object run in the *window* context.
 
 When the function that is running is a method on an object, the .this keyword is a reference to the instance of that object.  This is incredibly powerful as it allows us to store information on the instance instead of in the global scope.  Dojo relies heavily on this mechanism to create the class like usage of widget.
 
-
+// should we show how to set "this" ?
 
 ## Truthyness & Equality
 
-Truthyness in Javascript gets a little bit tricky, and people new to the language often make mistakes due to value coersion. Generally, this section blows peoples mind, in a rather annoying way. In short JavaScript has two kinds of equality:
+Truthyness in Javascript gets a little bit tricky, and people new to the language often make mistakes due to value coersion. Generally, this section blows peoples' minds, in a rather annoying way. In short JavaScript has two kinds of equality:
 
 === means the objects are identical
 
@@ -399,7 +411,7 @@ Every value in JavaScript coerces to true except:
 
 ### Examples
 
-TODO: Clean this up
+TODO: Clean this up // TODO this todo
 
 var x = 0;
 if (!x) {
