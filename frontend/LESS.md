@@ -15,7 +15,7 @@ The **LESS preamble** is a Redfin customization that rolls up several other styl
 
     main/redfin.stingrayStatic/src/main/resources/images/text/css/common/less-preamble/preamble.less
 
-It's pretty simple. What this file does is import `_colors.less`, `_mixins.less`, and `_media-queries.less`. The **colors** are [documented in the Redfin Style Guide](rsg-colors); the mixins and media-queries utilities are not *but ought to be* (**TODO**: add documentation).
+It's pretty simple. What this file does is import `_colors.less`, `_mixins.less`, and `_media-queries.less`. The **colors** are [documented in the Redfin Style Guide](rsg-colors); the mixins and media-queries utilities are not *but ought to be* (**TODO**: add documentation). It's important to realize that no *rules* should be specified in anything included in the preamble, because they'll be copied multiple times into every rolled up file. Only variables and mixins are allowed.
 
 As stated in the Preamble's intro:
 

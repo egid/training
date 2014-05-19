@@ -1,0 +1,196 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>HTML</title></head><body><h1 id="html-it-s-so-great-the-inventor-was-knighted">HTML: It's so great, the inventor was knighted.</h1>
+<p><em>HyperText Markup Language</em>, or <strong>HTML</strong>, is internet Lego. It's the basic building blocks used to create a website; it's purely <strong><em>markup</em></strong>, "tags that [...] provide additional information about the text" (<a href="http://www.linfo.org/markup_language.html">Linux Information Project</a>). With HTML, we can break content and concepts into distinct chunks of markup, and then do things to them later with technologies like <em>Cascading Style Sheets</em> and <em>JavaScript</em>. </p>
+<p>HTML was first proposed <a href="http://www.w3.org/Proposal.html">in 1990</a> by Tim Berners-Lee, and was officially published in 1995 as HTML 2.0, which sounded more trustworthy or something. Since then, HTML has gone through a handful of changes – HTML5 is what's currently supported by modern browsers, and what I'll discuss here. Here's an extremely simple <a href="http://validator.w3.org/check">valid HTML5 webpage</a> (try a <a href="http://jsbin.com/figot/1/edit?html,output">demo</a>):</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;This title shows up in a tab or window&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;This paragraph text will show up in your browser's viewport. Heck yes.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>You might be wondering what "valid HTML5" is, and why you should care. Valid markup is going to be correctly understood by a browser, by a search engine bot like Google, or by a screenreader. If you want your content to get parsed correctly, in any context, you ought to be writing valid HTML. Thankfully, HTML is reasonably simple.</p>
+<h2 id="the-basics">The basics!</h2>
+<p>If any of this is <strong><em>too</em></strong> basic, feel free to move on. But it might be worth a refresher anyway. If nothing else, you can correct mistakes in this document, right?</p>
+<h3 id="what-the-blazes-is-a-tag">What the blazes is a tag?</h3>
+<p>A tag is surrounded by angle brackets, carets, less/greater-than-signs, whatever you want to call them. Alligators. Anyway, they generally <em>open</em> and <em>close</em>, which looks like this: <code>&lt;html&gt; foo &lt;/html&gt;</code>. Notice how the second instance of the tag starts with a forward slash? That ends or <em>closes</em> the tag.</p>
+<p>Tags and their contents are referred to as an <em>element</em>. Here's a paragraph element:</p>
+<pre><code class="html">&lt;p&gt;This paragraph, and its surrounding tags, is a single element&lt;/p&gt;
+</code></pre>
+
+<p>To be valid code, tags must be <em>nested</em> properly. This means that the opening and closing tags of one element must lie within their <strong>parent</strong> element:</p>
+<pre><code class="html">&lt;p&gt;This paragraph is &lt;strong&gt;valid HTML&lt;/strong&gt;, because the 'strong' tags lie within the 'p' tags.&lt;/p&gt;
+
+&lt;p&gt;This paragraph is &lt;strong&gt;invalid HTML&lt;/p&gt;&lt;/strong&gt;, because it's nested improperly.
+</code></pre>
+
+<blockquote>
+<p><strong>NOTE</strong>: The best way to know that your code is going to work is to use a text editor or IDE that will syntax-highlight HTML. Some auto-complete or auto-close tags, which can be handy as well. I recommend <a href="https://github.com/egid/training/blob/master/tools/SublimeText.md">Sublime Text</a>, but it's your call.</p>
+</blockquote>
+<p>Some tags are self-contained, and must not have contents; these <strong>void elements</strong> (such science fiction. wow.) are often marked up as "self-closing" tags, which (optionally, but do it anyway) end with a <code>/</code>; the image tag is the most typical example, and at its simplest looks like <code>&lt;img /&gt;</code>. This example wouldn't actually <em>do</em> anything, but it's valid. Here's a more real-world example of an image tag:</p>
+<pre><code class="html">&lt;img src=&quot;http://bukk.it/howimakeweb.gif&quot; alt=&quot;Basic HTML&quot; /&gt;
+</code></pre>
+
+<p>Notice how the tag has some key-value pairs, like <code>src</code> and <code>alt</code>? This brings us to:</p>
+<h3 id="attributes">Attributes</h3>
+<p>That's right, attributes. HTML elements obtain their attributes from tags, and these can be used to provide the browser information about how they should look and behave. They consist of an attribute <em>name</em> and <em>value</em>, and the value should be surrounded by quotation marks, like so: <code>attr="value"</code>.</p>
+<p>Here's an example of some basic attributes and tags in use:</p>
+<pre><code class="html">&lt;div id=&quot;unique&quot; class=&quot;reusable multiple&quot; style=&quot;&quot;&gt;
+    div         block html element. contains attributes:
+        id      is unique, and can only be used once per page. *use sparingly*.
+        class   this is your swiss army knife. can reference multiple classes.
+        style   defines an inline style. DO NOT USE. We will find you.
+
+    inline html elements:
+        &lt;span class=&quot;highlight&quot;&gt;this would inherit the style of the 'highlight' CSS class&lt;/span&gt;
+        &lt;em&gt;em&lt;/em&gt; is the proper way to make text &lt;i&gt;italic&lt;/i&gt;.
+        &lt;strong&gt;strong&lt;/strong&gt; is the proper way to make text &lt;b&gt;bold&lt;/b&gt;.
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="semantics">Semantics</h3>
+<p>One of the big challenges in writing HTML is to make sure that for a given task, the correct element is used. There are entire <a href="http://diveintohtml5.info/semantics.html">chapters</a> written about semantics, probably unsurprisingly. Still, there are some simple guidelines (note: not rules) to follow that can get things on the right track.</p>
+<p><strong>You should use elements that reflect their contents.</strong> This means wrapping paragraphs in <code>&lt;p&gt;</code>, bulleted lists in <code>&lt;ul&gt;</code>, headlines in a <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code> - that sort of thing. Don't create an unordered list and then use CSS to turn it into a numbered list later - that's unsemantic <em>and</em> happens to be pretty stupid.</p>
+<p>Conversely: <strong>You should not use elements just because they <em>look</em> correct</strong>. Just because a mockup has big gaps between paragraphs, it's not acceptable to throw a ton of line breaks in there to make it happen. If I see <code>&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;</code> anywhere, I'm running <code>git blame</code> and chasing you down.</p>
+<p>Basically, use elements as they were intended, as much as possible. Keep the <em>visual presentation</em> of the page separate from the markup, and do the layout and interaction with Cascading Style Sheets and JavaScript. Lucky for you, it's now time to read about CSS!</p>
+<p><strong>UP NEXT</strong>: <em><a href="https://github.com/egid/training/blob/master/frontend/CSS.md">an introduction to basic CSS</a></em>.</p>
+<h3 id="resources">Resources</h3>
+<ul>
+<li><a href="http://caniuse.com/">caniuse.com</a> - a series of compatibility tables for HTML5, CSS3, and other features.</li>
+</ul>
+<h1 id="additional-reading-optional">Additional reading (optional)</h1>
+<ul>
+<li><a href="http://www.abookapart.com/products/html5-for-web-designers">HTML5 for Web Designers, by Jeremy Keith</a></li>
+<li><a href="http://www.abookapart.com/products/css3-for-web-designers">CSS3 for Web Designers, by Dan Cederholm</a></li>
+<li><a href="http://www.codecademy.com/tracks/web">Codecademy HTML &amp; CSS track</a><ul>
+<li>great series of starting tutorials if you're very new to HTML &amp; CSS</li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction">MDN Intro to HTML</a> provided a ton of inspiration for this document.</li>
+</ul>
+<!-- LINKS --></body></html>
